@@ -107,4 +107,17 @@
             gsap.to(btn, { scale: 1, duration: 0.2 });
         });
     });
+ // Wait until the DOM is fully loaded
+ document.addEventListener("DOMContentLoaded", function () {
+    // Select all cards
+    const cards = document.querySelectorAll('.card');
 
+    // GSAP animation
+    gsap.from(cards, {
+        opacity: 0,
+        y: 50, // Start 50px below their final position
+        duration: 1.2,
+        stagger: 0.3, // Delay for each card
+        ease: "power3.out", // Ease out effect
+    });
+});
