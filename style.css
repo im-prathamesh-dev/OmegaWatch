@@ -1,21 +1,28 @@
-/* @font-face {
-    font-family: 'sans sarif';
-    src: url('fonts/cgor45w.ttf') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
 
-/* body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+
+
+ 
+ /* Transparent Navbar with Blur Effect */
+ .navbar-custom {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blurred effect */
 }
 
+/* Centering Logo */
+.navbar .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color:#c40d2e;
+}
+
+/* Fullscreen Video */
 #video-container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -28,52 +35,69 @@
     object-fit: cover;
 }
 
-.navbar {
-    width: 100%;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
-    display: block;
-    clear: both;
-}
-
+/* Down Arrow Icon */
 #overlay-text {
     position: absolute;
-    top: 90%;
+    bottom: 50px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
+    transform: translateX(-50%);
     color: white;
-    text-align: center;
-    font-family: 'omega',sans-serif;
 }
 
-
-
-.btn-discover {
-    margin-top: 2rem;
-    background-color: #000;
-    color: white;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none; /* Remove underline from link */
-/* } */
-
-/* .btn-discover:hover {
-    background-color: #333;
-} */
-
-/* .container{
-    width: 100%;
+/* Content Section */
+.content-section {
     height: 100vh;
-    background-color: #fff;
-} */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 0 5%;
+}
+
+.content-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.content-text h3 {
+    font-size: 1.2rem;
+    color: #797979;
+}
 .content-section {
     margin-top: 0 !important; /* Use !important with caution */
     padding-top: 40px;
     padding-bottom: 40px;
+}
+#button {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #797979;
+    background: white;
+    border: 0.1px solid #c40d2e;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+}
+
+#button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #c40d2e;
+    bottom: -100%;
+    left: 0;
+    transition: bottom 0.4s ease-in-out;
+    z-index: -1;
+}
+
+#button:hover::before {
+    bottom: 0;
+}
+
+#button:hover {
+    color: white;
 }

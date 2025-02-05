@@ -13,71 +13,12 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-
-    <style>
-        /* Transparent Navbar with Blur Effect */
-        .navbar-custom {
-            background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-            backdrop-filter: blur(10px); /* Blurred effect */
-        }
-
-        /* Centering Logo */
-        .navbar .navbar-brand {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: red;
-        }
-
-        /* Fullscreen Video */
-        #video-container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        #background-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Down Arrow Icon */
-        #overlay-text {
-            position: absolute;
-            bottom: 50px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: white;
-        }
-
-        /* Content Section */
-        .content-section {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: left;
-            padding: 0 5%;
-        }
-
-        .content-text h1 {
-            font-size: 3rem;
-            font-weight: bold;
-        }
-
-        .content-text h3 {
-            font-size: 1.2rem;
-            color: #555;
-        }
-    </style>
+    
 </head>
 <body>
 
@@ -108,7 +49,7 @@
                 <button class="btn btn-outline-light me-2"><i class="ri-search-line"></i></button>
                 <button class="btn btn-outline-light position-relative">
                     <i class="ri-notification-3-line"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge bg-danger rounded-circle">1</span>
+                    <span class="position-absolute top-0 start-100 translate-middle badge bg-danger rounded-circle" >1</span>
                 </button>
             </div>
         </div>
@@ -123,23 +64,23 @@
                 <img src="pngegg.png" class="img-fluid" width="400">
             </div>
             <div class="col-md-6 content-text">
-                <p class="text-danger fw-bold">Valentine’s Day</p>
-                <h1>The Gifts of Love</h1>
-                <h3>Gaze into the most special hours of love. When watches tell the time, but feelings are impossible to describe.</h3>
-                <button class="btn btn-primary mt-3">DISCOVER THE SELECTION</button>
+                <p class="text-danger fw-bold" style="color: #797979;">Valentine’s Day</p>
+                <h1 style="text-transform: uppercase;color: #797979;">The Gifts of Love</h1>
+                <h3 style="color: #797979;">Gaze into the most special hours of love. When watches tell the time, but feelings are impossible to describe.</h3>
+                <button class="btn btn-primary mt-3" id="button">DISCOVER THE SELECTION</button>
             </div>
         </div>
         <img src="https://img.freepik.com/free-vector/blooming-rose-white-background_1182-1663.jpg?t=st=1738675562~exp=1738679162~hmac=edaccf5565108ef7e696fea71d480487de06e8987050e5c8b0b126f9f223b7af&w=740" class="img-fluid" width="200" height="200" class="flower" style=" filter: blur(0px); margin-top: 360px;">
     </div>
    
     <!-- section -->
-    <div class="container-fluid content-section" style="margin-top: 0px;">
+    <div class="container-fluid content-section" >
         <div class="row align-items-center w-80" style="margin-top: 0px;">
-            <h4 class="text-center ">Diver 300M</h4>
-            <h1 class="text-center">Precision. Power. Poise.</h1>
-            <p class="text-center">The Seamaster Diver 300M continues its legacy with models made for the adventurer in you. Dive deeper, go further.</p>
+            <h4 class="text-center " style="text-transform: uppercase;color: #797979;">Diver 300M</h4>
+            <h1 class="text-center" style="text-transform: uppercase;color: #797979;">Precision. Power. Poise.</h1>
+            <p class="text-center"style="color: #797979;">The Seamaster Diver 300M continues its legacy with models made for the adventurer in you. Dive deeper, go further.</p>
             <div class="text-center">
-                <button class="btn btn-primary mt-3" style="padding: 10px;">DISCOVER THE COLLECTION</button>
+                <button class="btn btn-primary mt-3" style="padding: 10px;" id="button">DISCOVER THE COLLECTION</button>
             </div>
         </div>
     </div>
@@ -166,9 +107,9 @@
            
             <div class="col-md-6 content-text " >
                 
-                <h1>Speedmaster Pilot</h1>
+                <h1 style="text-transform: uppercase;color: #797979;">Speedmaster Pilot</h1>
                 <h3>OMEGA takes to the skies again with a new cockpit-inspired timepiece for precision, functionality, and style in flight.</h3>
-                <button class="btn btn-primary mt-3">DISCOVER THE SELECTION</button>
+                <button class="btn btn-primary mt-3" id="button">DISCOVER THE WATCH</button>
             </div>
             <div class="col-md-6 text-center">
                 <img src="https://www.omegawatches.com/media/wysiwyg/Home_SP_Pilot_KV_Push.jpg" class="img-fluid" width="500">
@@ -177,24 +118,30 @@
         
     </div>
     <div class="container-fluid content-section">
-        <div class="row align-items-center w-100">
-            <p class="text-center">WATCH STRAPS</p>
-            <h1 class="text-center">MADE BY HAND FOR EVERY KIND OF WRIST</h1>
-            <h6 class="text-center">witching out your strap is a fast and easy way to give your OMEGA a personal makeover. You can fix a strap to suit the season, the occasion - or even your ever-changing moods. Start your search now and discover the playful side of Swiss precision.</h6>
+        <div class="row align-items-center w-100 " style="margin-bottom: 0px;">
+            <p class="text-center" style="color: #797979;">WATCH STRAPS</p>
+            <h1 class="text-center"style="color: #797979;">MADE BY HAND FOR EVERY KIND OF WRIST</h1>
+            <h6 class="text-center" style="color: #797979;">witching out your strap is a fast and easy way to give your OMEGA a personal makeover. You can fix a strap to suit the season, the occasion - or even your ever-changing moods. Start your search now and discover the playful side of Swiss precision.</h6>
             <div class="col-12 align-items-center mt-2 ">
-                <button class="btn btn-primary align-items-center "style="margin-left: 560px;"> SHOP THE COLLECTION</button>
+                <button class="btn btn-primary align-items-center "style="margin-left: 480px;" id="button"> SHOP THE COLLECTION</button>
             </div>
-            <div class="col-12">
-                <img src="https://www.omegawatches.com/media/wysiwyg/image-2-3-watchstrapsV2-large.jpg " alt="" class="col-5 mt-5" style="width: 800px; margin-right: 50px;">
-               
-                    <img src="https://www.omegawatches.com/media/wysiwyg/image-moduleEcomm-2-4-watchstraps.jpg" alt="" class="col-4 mt-5 " style="width: 400px; margin-top: 30px;">
-                </div>
+            
             </div>
+            
         </div>
         
         
     </div>
-   <hr>
+    <div class="container-fluid content-section margin-top: 0px !important;">
+        <div class="row align-items-center w-100">
+            <div class="col-12" style="margin-top: 0px !important;">
+                <img src="https://www.omegawatches.com/media/wysiwyg/image-2-3-watchstrapsV2-large.jpg " alt="" class="col-5 mt-4" style="width: 730px; margin-right: 50px; height: 455px;">
+               
+                    <img src="https://www.omegawatches.com/media/wysiwyg/image-moduleEcomm-2-4-watchstraps.jpg" alt="" class="col-4 mt-3 " style="width: 400px; margin-top: 30px;">
+                </div>
+        </div>
+    </div>
+  
     <!-- footer -->
     <footer class="bg-light pt-5 pb-4">
         <div class="container">
